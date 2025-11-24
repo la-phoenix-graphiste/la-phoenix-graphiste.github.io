@@ -1,0 +1,73 @@
+html {
+	background-color: black;
+}
+
+body {
+	margin: 0;
+}
+
+
+.main {
+	min-height: 200vh;
+}
+
+.h1_art {
+  color: white;
+  font-size: 25em;
+  font-family: "Montserrat";
+  white-space: nowrap;
+  position: fixed;
+}
+
+.h1_graphic {
+  color: white;
+  font-size: 25em;
+  font-family: "Montserrat";
+  white-space: nowrap;
+  position: fixed;
+
+}
+
+.bg_image_art {
+	background-image:url(../images/logo_high_res.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-size: cover;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: fixed;
+	top: 50%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bg_image_graphic {
+	background-image:url(../images/logo_high_res.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-size: cover;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.opacity_hover {
+	opacity:65%;
+	transition: opacity 500ms
+}
+
+.opacity_hover:hover {
+	opacity: 100%;
+}
