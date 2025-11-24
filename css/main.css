@@ -13,7 +13,7 @@ body {
 
 .h1_art {
   color: white;
-  font-size: 25em;
+  font-size: 12vw;
   font-family: "Montserrat";
   white-space: nowrap;
   position: fixed;
@@ -21,7 +21,7 @@ body {
 
 .h1_graphic {
   color: white;
-  font-size: 25em;
+  font-size: 12vw;
   font-family: "Montserrat";
   white-space: nowrap;
   position: fixed;
@@ -70,4 +70,5 @@ body {
 
 .opacity_hover:hover {
 	opacity: 100%;
+
 }
