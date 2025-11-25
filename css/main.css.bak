@@ -12,6 +12,38 @@ h1 {
 	pointer-events : none
 }
 
+header {
+	position: fixed;
+	top: 25px;
+	left: 10px;
+	z-index: 999;
+	font-family: "Montserrat";
+	font-weight: 200;
+	filter: drop-shadow(0 1px 7px rgba(0,0,0,0.5));
+	padding: 30px;
+}
+
+.header_links a {
+	margin: auto 40px;
+	font-size: 3em;
+	text-decoration: none;
+	color: rgb(231, 236, 255);
+	transition: all 50ms;
+	transition-timing-function: ease-in-out;
+	}
+
+.header_links a:hover {
+	margin-bottom: -0px;
+	color: rgb(0, 236, 255);
+	transform: scale(1.2);
+	}
+
+@media screen and (width >= 80rem) {
+		.header_links {
+		display: flex;
+		gap: 3em;
+	}
+}
 .main {
 	min-height: 200vh;
 }
@@ -87,12 +119,12 @@ div.showcase img {
 	padding: 10px;
 	transform-origin: center;
 	height: 20vw;
-	transition: transform 100ms;
+	transition: all 150ms;
 	transition-timing-function: ease-in-out;
 
 }
 
 div.showcase img:hover {
-	transform: scale(1;1);
-
+	height: 22vw;
+	margin-bottom: -1vw;
 }
