@@ -120,10 +120,13 @@ div.showcase img {
 	height: 20vw;
 	transition: all 150ms;
 	transition-timing-function: ease-in-out;
+	width: auto;
+	max-width: 100%;
 
 }
 
 div.showcase img:hover {
 	height: 22vw;
 	margin-bottom: -1vw;
+
 }
