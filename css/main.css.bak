@@ -1,35 +1,40 @@
 html {
-	background-color: black;
+	background-color: rgb(38, 38, 37);
 }
 
 body {
 	margin: 0;
 }
 
+h1 {
+	z-index: 1;
+	filter: drop-shadow(0 1px 8px rgba(0,0,0,0.25));
+	pointer-events : none
+}
 
 .main {
 	min-height: 200vh;
 }
 
 .h1_art {
-  color: white;
-  font-size: 30em;
+  color: rgb(231, 236, 255);
+  font-size: 12vw;
   font-family: "Montserrat";
   white-space: nowrap;
   position: fixed;
+  font-weight: 900;
 }
 
 .h1_graphic {
-  color: white;
-  font-size: 30em;
+  color: rgb(231, 236, 255);
+  font-size: 12vw;
   font-family: "Montserrat";
   white-space: nowrap;
   position: fixed;
-
+  font-weight: 900;
 }
 
 .bg_image_art {
-	background-image:url(../images/logo_high_res.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
@@ -46,7 +51,6 @@ body {
 	align-items: center;
 }
 .bg_image_graphic {
-	background-image:url(../images/logo_high_res.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
@@ -70,4 +74,25 @@ body {
 
 .opacity_hover:hover {
 	opacity: 100%;
+}
+
+div.showcase {
+	background-color: rgb(38, 38, 37);
+	overflow: visible;
+	white-space: nowrap;
+	padding: 10px;	
+}
+
+div.showcase img {
+	padding: 10px;
+	transform-origin: center;
+	height: 20vw;
+	transition: transform 100ms;
+	transition-timing-function: ease-in-out;
+
+}
+
+div.showcase img:hover {
+	transform: scale(1;1);
+
 }
