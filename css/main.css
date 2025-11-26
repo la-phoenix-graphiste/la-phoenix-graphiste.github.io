@@ -32,6 +32,10 @@ header {
 	transition-timing-function: ease-in-out;
 	}
 	
+.current {
+	transform: scale(1.2);
+}
+
 .current a {
 	color: rgb(0, 236, 255);
 }
@@ -165,6 +169,7 @@ div.showcase img:hover {
 	margin-top: -190px;
 	top: 50%;
 	left: 50%;
+	pointer-events : none
 }
 
 .about {
@@ -202,7 +207,7 @@ div.tom_image {
 		transition: all 150ms;
 		position: absolute;
 		left: 0;
-		transition: all 150ms;
+		transition: left 150ms, transform 500ms, border-radius 500ms;
 	}
 
 @media screen and (width >= 1000px) {
@@ -211,4 +216,44 @@ div.tom_image {
 		position: relative;
 		left: -300px;
 	}
+}
+
+.tom_image img:hover {
+	border-radius: 40px;
+	transform: scale(1.1);
+}
+
+span.logos {
+	display: flex;
+	max-height: 150px;
+	max-width: 840px;
+	position: fixed;
+	margin-left: -420px;
+	margin-top: -75px;
+	top: 50%;
+	left:50%;
+	justify-content: center;
+	align-items: center;
+}
+@media screen and (width <= 750px) {
+	span.logos {
+		flex-direction: column;
+		margin-left: -170px;
+		margin-top: -75px;
+	}
+}
+
+
+.logos img {
+	display: flex;
+	height: 150px;
+	padding: 50px;
+	flex-direction: column;
+	transition: transform 150ms;
+	filter: brightness(0) saturate(100%) invert(88%) sepia(4%) saturate(1875%) hue-rotate(197deg) brightness(104%) contrast(104%);
+}
+
+.logos img:hover {
+	transform: scale(1.2);
+	filter: brightness(0) saturate(100%) invert(73%) sepia(21%) saturate(4781%) hue-rotate(138deg) brightness(104%) contrast(105%); 
 }
