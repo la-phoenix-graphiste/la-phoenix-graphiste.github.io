@@ -139,7 +139,7 @@ div.showcase img:hover {
 
 .about_text {
 	max-width: 350px;
-	position: absolute;
+	position: fixed;
 	margin-left: -175px;
 	margin-top: -190px;
 	top: 50%;
