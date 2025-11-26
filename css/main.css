@@ -31,11 +31,22 @@ header {
 	transition: all 50ms;
 	transition-timing-function: ease-in-out;
 	}
+	
+.current a {
+	color: rgb(0, 236, 255);
+}
 
 .header_links a:hover {
 	color: rgb(0, 236, 255);
 	transform: scale(1.2);
 	}
+
+@media screen and (max-width: 500px) {
+  .header_links a {
+    font-size: 1em;
+	display: grid;
+  }
+}
 
 @media screen and (width >= 80rem) {
 		.header_links {
