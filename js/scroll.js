@@ -13,11 +13,11 @@ window.addEventListener('scroll', function () {
 window.addEventListener('scroll', function () {
    const showcase_art = document.querySelector('.showcase_art');
    const scrollY = window.scrollY;
-   showcase_art.style.transform = `translateX(calc(0% + ${scrollY * 0.1}px))`;
+   showcase_art.style.transform = `translateX(calc(200px - ${scrollY * 0.2}px))`;
 });
 
 window.addEventListener('scroll', function () {
    const showcase_graphic = document.querySelector('.showcase_graphic');
    const scrollY = window.scrollY;
-   showcase_graphic.style.transform = `translateX(calc(0% - ${scrollY * 0.1}px))`;
+   showcase_graphic.style.transform = `translateX(calc(-400px + ${scrollY * 0.2}px))`;
 });

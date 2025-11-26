@@ -56,7 +56,7 @@ header {
 	}
 }
 .main {
-	min-height: 200vh;
+	min-height: 350vh;
 }
 
 .h1_art {
@@ -139,8 +139,16 @@ div.showcase img:hover {
 	margin-bottom: -1vw;
 }
 
+.showcase_art {
+	transform: translateX(200px);
+}
+
+.showcase_graphic {
+	transform: translateX(-400px);
+}
+
 .about_paragraph {
-	max-width: 100px;
+	max-width: 600px;
 	max-height: max-content;
 	margin: 0 auto;
 	display: flex;
@@ -149,24 +157,58 @@ div.showcase img:hover {
 	align-items: center;
 }
 
-.about_text {
+.moving_box {
+	display: flex ;
 	max-width: 350px;
 	position: absolute;
 	margin-left: -175px;
 	margin-top: -190px;
 	top: 50%;
 	left: 50%;
-	color: rgb(231, 236, 255);
-	font-family: "Montserrat";
 }
 
-.about_text h2 {
+.about {
+	color: rgb(231, 236, 255);
+	font-family: "Montserrat";
+	filter: drop-shadow(0 1px 15px rgba(0,0,0,0.35))
+	
+}
+
+.about h2 {
 	font-weight: 900;
 	font-size: 3.4em;
 }
 
-.about_text p {
+.about p {
 	font-weight: 200;
 	font-size: 1.7em;
 }
 
+div.tom_image {
+	display: flex ;
+	max-height: 600px;
+	position: absolute;
+	margin-left: -230px;
+	margin-top: -300px;
+	top: 50%;
+	left:50%;
+	flex-direction: column;
+}
+
+.tom_image img {
+		display: flex;
+		height: 600px;
+		box-shadow: 0 1px 20px rgba(0,0,0,0.55);
+		transition: all 150ms;
+		position: absolute;
+		left: 0;
+		transition: all 150ms;
+	}
+
+@media screen and (width >= 1000px) {
+	.tom_image img {
+		display: flex;
+		position: relative;
+		left: -300px;
+	}
+}
