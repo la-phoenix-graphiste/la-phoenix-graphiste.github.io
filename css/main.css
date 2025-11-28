@@ -19,7 +19,7 @@ header {
 	z-index: 999;
 	font-family: "Montserrat";
 	font-weight: 200;
-	filter: drop-shadow(0 1px 7px rgba(0,0,0,0.5));
+	filter: drop-shadow(0 1px 10px rgba(0,0,0,0.65));
 	padding: 30px;
 }
 
@@ -181,17 +181,16 @@ div.showcase img:hover {
 
 .about h2 {
 	font-weight: 900;
-	font-size: 3.4em;
+	font-size: 340%;
 }
 
 .about p {
 	font-weight: 200;
-	font-size: 1.7em;
+	font-size: 170%;
 }
 
 div.tom_image {
 	display: flex ;
-	max-height: 600px;
 	position: absolute;
 	margin-left: -230px;
 	margin-top: -300px;
@@ -256,4 +255,52 @@ span.logos {
 .logos img:hover {
 	transform: scale(1.2);
 	filter: brightness(0) saturate(100%) invert(73%) sepia(21%) saturate(4781%) hue-rotate(138deg) brightness(104%) contrast(105%); 
+}
+
+.test_text p {
+	font-family: "Montserrat";
+	font-weight: 200;
+	color: rgb(231, 236, 255);
+	font-size: 1.5rem;
+}
+
+
+.test_text h2 {
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: rgb(231, 236, 255);
+	font-size: 4rem;
+}
+
+span.test_text p {
+	display: grid;
+	max-width: 25em;
+	padding-right: 50px;
+}
+
+.test_width img {
+	height: 100%;
+	width: 100%;
+	min-width: 50%;
+}
+
+.test_width h2 {
+	width: 500px;
+	height: auto;
+}
+
+.test_width div {
+	display: flex;
+	margin: 200px 150px;
+}
+
+@media screen and  (width <= 1000px) {
+	.test_width div {
+		display: grid;
+	}
+}
+
+
+test_width {
+	position: relative;
 }
