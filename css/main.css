@@ -6,11 +6,7 @@ body {
 	margin: 0;
 }
 
-h1 {
-	z-index: 1;
-	filter: drop-shadow(0 1px 8px rgba(0,0,0,0.25));
-	pointer-events : none
-}
+/*header css*/
 
 header {
 	position: fixed;
@@ -59,97 +55,170 @@ header {
 		gap: 3em;
 	}
 }
-.main {
-	min-height: 350vh;
+
+/*main page css*/
+
+.titles h1 {
+	color: rgb(231, 236, 255);
+	font-size: 12vw;
+	font-family: "Montserrat";
+	white-space: nowrap;
+	font-weight: 900;
+	position: relative;
+	filter: drop-shadow(0 1px 8px rgba(0,0,0,0.25));
+	
 }
 
-.h1_art {
-  color: rgb(231, 236, 255);
-  font-size: 12vw;
-  font-family: "Montserrat";
-  white-space: nowrap;
-  position: fixed;
-  font-weight: 900;
-}
 
-.h1_graphic {
-  color: rgb(231, 236, 255);
-  font-size: 12vw;
-  font-family: "Montserrat";
-  white-space: nowrap;
-  position: fixed;
-  font-weight: 900;
-}
-
-.bg_image_art {
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100%;
-	background-size: cover;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	position: fixed;
-	top: 50%;
-	left: 0%;
-	right: 0%;
-	bottom: 0%;
-	display: flex;
+.and {
+	color: rgb(0, 236, 255);
+	font-size: 20vw;
+	font-family: "Montserrat";
+	white-space: nowrap;
+	font-weight: 900;
 	justify-content: center;
 	align-items: center;
-}
-.bg_image_graphic {
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100%;
-	background-size: cover;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	z-index: 0;
 	position: fixed;
+	left: 0%;
+	right: 0%;
+	bottom: 10%;
 	top: 0%;
+	display: flex;
+	filter: blur(0px);
+}
+
+.titles div {
+	justify-content: center;
+	align-items: center;
+	position: fixed;
 	left: 0%;
 	right: 0%;
 	bottom: 50%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	pointer-events: none;
+	z-index: 2;
+	
 }
 
-.opacity_hover {
-	opacity:65%;
-	transition: opacity 500ms
+
+.bg_image_art {
+	position: fixed;
+	top: 55%;
+	bottom: 0%;
+	
 }
 
-.opacity_hover:hover {
-	opacity: 100%;
-}
-
-div.showcase {
-	background-color: rgb(38, 38, 37);
+nav.showcase {
+	/*background-color: rgb(38, 38, 37);*/
 	overflow: visible;
-	white-space: nowrap;
 	padding: 10px;	
+	position: relative;
+	z-index: 1;
+	filter: drop-shadow(0 1px 15px rgba(0,0,0,0.35));
+	margin: 880px 0 auto;
+	text-align: center;
+	justify-content: center;
+	display:flex;
+	flex-wrap: wrap;
+	
 }
 
-div.showcase img {
-	padding: 10px;
-	height: 20vw;
-	transition: all 150ms;
+
+.showcase p {
+	pointer-events: none;
+	position: fixed;
+	left: 6%;
+	/*right: 0%;
+	top: 0%;*/
+	bottom: 3%;
+	visibility: hidden;
+	opacity: 0;
+	/*color: rgb(231, 236, 255);*/
+	color: rgb(38, 38, 37);
+	font-size: 20px;
+	font-family: "Montserrat";
+	font-weight: 400;
+	transition: all 1ms;
+	
+	
+	
+	
+}
+nav.showcase div:hover p {
+	
+	animation: rotate 400ms ease-out 0ms forwards;
+	
+}
+
+@keyframes rotate {
+	
+	0% {
+    transform: translateY(40px);
+	visibility: hidden;
+	opacity: 0;
+  }
+	100% {
+    transform: translateY(0px);
+	visibility: visible;
+	opacity: 1;
+  }
+}
+
+@media screen and (min-width: 701px) {
+	nav.showcase img {
+
+	min-height: 250px;
+	
+	height: 500px;
+	transition: all 60ms;
 	transition-timing-function: ease-in-out;
+	}
 
 }
 
-div.showcase img:hover {
-	height: 22vw;
+@media screen and (min-width: 701px) {
+	nav.showcase div {
+
+	min-height: 250px;
+	padding: 10px;
+	height: 500px;
+	transition: all 60ms;
+	transition-timing-function: ease-in-out;
+	
+	}
+
+}
+
+@media screen and (min-width: 701px) {
+	/*nav.showcase img:hover {
+	height: 550px;
 	margin-bottom: -1vw;
+	margin-left: -1vw;
+	padding: 20px;
+	}*/
+	nav.showcase div:hover {
+	transform: scale(1.07);
+	border-radius: 25px;
+	padding: 15px;
+	}
+	nav.showcase img:hover {
+	border-radius: 25px;
+	
+	}
+	
 }
 
-.showcase_art {
-	transform: translateX(200px);
+@media screen and (max-width: 700px) {
+  nav.showcase img {
+	width: 450px;
+	min-width: 250px;
+	padding: 10px;
+	}
 }
 
-.showcase_graphic {
-	transform: translateX(-400px);
-}
+
+/*about css*/
 
 .about_paragraph {
 	max-width: 600px;
@@ -170,6 +239,10 @@ div.showcase img:hover {
 	top: 50%;
 	left: 50%;
 	pointer-events : none
+}
+
+#text_move {
+	transition: all 50ms;
 }
 
 .about {
@@ -222,6 +295,8 @@ div.tom_image {
 	transform: scale(1.1);
 }
 
+/*contact css*/
+
 span.logos {
 	display: flex;
 	max-height: 150px;
@@ -254,7 +329,8 @@ span.logos {
 
 .logos img:hover {
 	transform: scale(1.2);
-	filter: brightness(0) saturate(100%) invert(73%) sepia(21%) saturate(4781%) hue-rotate(138deg) brightness(104%) contrast(105%); 
+	filter: brightness(0) saturate(100%) invert(73%) sepia(21%) saturate(4781%) hue-rotate(138deg) brightness(104%) 
+	contrast(105%) /*drop-shadow( 0 0px 10px rgba(0, 236, 255,0.15))*/; 
 }
 
 .test_text p {
