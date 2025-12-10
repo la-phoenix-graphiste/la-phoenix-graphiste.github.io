@@ -41,9 +41,9 @@ header {
 	transform: scale(1.2);
 	}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .header_links a {
-    font-size: 1em;
+    font-size: 2em;
 	display: grid;
 	margin-bottom: 10px;
   }
@@ -60,19 +60,19 @@ header {
 
 .titles h1 {
 	color: rgb(231, 236, 255);
-	font-size: 12vw;
+	font-size: 10vw;
 	font-family: "Montserrat";
 	white-space: nowrap;
 	font-weight: 900;
 	position: relative;
 	filter: drop-shadow(0 1px 8px rgba(0,0,0,0.25));
-	
+	margin: 0px;
 }
 
 
 .and {
 	color: rgb(0, 236, 255);
-	font-size: 20vw;
+	font-size: 16vw;
 	font-family: "Montserrat";
 	white-space: nowrap;
 	font-weight: 900;
@@ -82,31 +82,35 @@ header {
 	position: fixed;
 	left: 0%;
 	right: 0%;
-	bottom: 10%;
-	top: 0%;
+	
+	top: 5%;
+	margin-top:20vh;
 	display: flex;
 	filter: blur(0px);
+	opacity: 50%;
 }
 
-.titles div {
+div.titles {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	left: 0%;
-	right: 0%;
-	bottom: 50%;
+	top: 0%;
+	bottom: 0%;
+	max-height: 250px;
 	display: flex;
+	flex-wrap: wrap;
 	pointer-events: none;
 	z-index: 2;
+	margin-top: 20vh;
+
 	
 }
 
 
 .bg_image_art {
-	position: fixed;
-	top: 55%;
+	position: relative;
+	/*top: -20%;*/
 	bottom: 0%;
-	
 }
 
 nav.showcase {
@@ -116,7 +120,7 @@ nav.showcase {
 	position: relative;
 	z-index: 1;
 	filter: drop-shadow(0 1px 15px rgba(0,0,0,0.35));
-	margin: 880px 0 auto;
+	margin: 70vmin 0 auto;
 	text-align: center;
 	justify-content: center;
 	display:flex;
@@ -167,43 +171,31 @@ nav.showcase div:hover p {
 
 @media screen and (min-width: 701px) {
 	nav.showcase img {
-
-	min-height: 250px;
-	
-	height: 500px;
-	transition: all 60ms;
-	transition-timing-function: ease-in-out;
+		
+		min-height: 200px;
+		
+		height: 500px;
+		transition: all 180ms;
+		transition-timing-function: ease-in-out;
+		
 	}
-
-}
-
-@media screen and (min-width: 701px) {
 	nav.showcase div {
-
-	min-height: 250px;
-	padding: 10px;
-	height: 500px;
-	transition: all 60ms;
-	transition-timing-function: ease-in-out;
+		overflow: hidden;
+		min-height: 200px;
+		margin: 5px;
+		height: 500px;
+		
+		
+		
 	
 	}
-
-}
-
-@media screen and (min-width: 701px) {
-	/*nav.showcase img:hover {
-	height: 550px;
-	margin-bottom: -1vw;
-	margin-left: -1vw;
-	padding: 20px;
-	}*/
 	nav.showcase div:hover {
-	transform: scale(1.07);
-	border-radius: 25px;
-	padding: 15px;
+		transform: scale(1);
+	
 	}
 	nav.showcase img:hover {
-	border-radius: 25px;
+		transform: scale(1.1);
+		
 	
 	}
 	
@@ -333,11 +325,33 @@ span.logos {
 	contrast(105%) /*drop-shadow( 0 0px 10px rgba(0, 236, 255,0.15))*/; 
 }
 
+/*porject page css*/
+
+.introduction p {
+	font-family: "Montserrat";
+	font-weight: 200;
+	color: rgb(231, 236, 255);
+	font-size: 1.2rem;
+}
+
+
+.introduction h2 {
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: rgb(231, 236, 255);
+	font-size: 4rem;
+}
+
+span.introduction p {
+	display: grid;
+	padding-right: 50px;
+}
+
 .test_text p {
 	font-family: "Montserrat";
 	font-weight: 200;
 	color: rgb(231, 236, 255);
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 
@@ -351,13 +365,38 @@ span.logos {
 span.test_text p {
 	display: grid;
 	max-width: 25em;
-	padding-right: 50px;
+	padding-right: 180px;
+}
+
+div.gallery {
+	overflow: visible;
+	padding: 10px;	
+	position: relative;
+	z-index: 1;
+	/*filter: drop-shadow(0 1px 15px rgba(0,0,0,0.35));*/
+	margin: 0 0 auto;
+	text-align: center;
+	justify-content: center;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+div.gallery img {
+	height: 500px;
+	width: auto;
+	padding: 10px;
+}
+
+img.first_pic {
+	min-width:300px;
+	max-width: 1000px;
 }
 
 .test_width img {
+	
 	height: 100%;
 	width: 100%;
-	min-width: 50%;
+	
 }
 
 .test_width h2 {
@@ -373,6 +412,12 @@ span.test_text p {
 @media screen and  (width <= 1000px) {
 	.test_width div {
 		display: grid;
+		margin: 200px 75px;
+	}
+	div.gallery img {
+		
+		width: 350px;
+		height:auto;
 	}
 }
 

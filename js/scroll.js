@@ -1,13 +1,13 @@
 window.addEventListener('scroll', function () {
    const text_graphic = document.querySelector('.h1_graphic');
    const scrollY = window.scrollY;
-   text_graphic.style.transform = `translateX(calc(0% - ${scrollY * 2.5}px))`;
+   text_graphic.style.transform = `translateX(calc(0% - ${scrollY * 3}px))`;
 });
 
 window.addEventListener('scroll', function () {
    const text_art = document.querySelector('.h1_art');
    const scrollY = window.scrollY;
-   text_art.style.transform = `translateX(calc(-0% + ${scrollY * 2.5}px))`;
+   text_art.style.transform = `translateX(calc(-0% + ${scrollY * 3}px))`;
 });
 
 /*
