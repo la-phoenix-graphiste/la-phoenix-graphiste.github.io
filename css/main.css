@@ -139,11 +139,13 @@ nav.showcase {
 	visibility: hidden;
 	opacity: 0;
 	/*color: rgb(231, 236, 255);*/
-	color: rgb(38, 38, 37);
+	/*color: rgb(38, 38, 37); -without difference blending mode*/
+	color: rgb(218, 235, 235);
 	font-size: 20px;
 	font-family: "Montserrat";
-	font-weight: 400;
+	font-weight: 300;
 	transition: all 1ms;
+	mix-blend-mode: difference;
 	
 	
 	
@@ -343,8 +345,9 @@ span.logos {
 }
 
 span.introduction p {
-	display: grid;
-	padding-right: 50px;
+	display: flex;
+	flex-direction: column;
+	
 }
 
 .test_text p {
@@ -360,6 +363,7 @@ span.introduction p {
 	font-weight: 400;
 	color: rgb(231, 236, 255);
 	font-size: 4rem;
+	margin-top: 0;
 }
 
 span.test_text p {
@@ -368,23 +372,16 @@ span.test_text p {
 	padding-right: 180px;
 }
 
-div.gallery {
-	overflow: visible;
-	padding: 10px;	
-	position: relative;
-	z-index: 1;
-	/*filter: drop-shadow(0 1px 15px rgba(0,0,0,0.35));*/
-	margin: 0 0 auto;
-	text-align: center;
-	justify-content: center;
-	display:flex;
-	flex-wrap: wrap;
+span.test_text {
+	height: min-content;
+	/*margin: auto 0;*/
 }
 
 div.gallery img {
-	height: 500px;
+	height: 650px;
 	width: auto;
 	padding: 10px;
+	filter: drop-shadow(0 1px 10px rgba(0,0,0,0.25));
 }
 
 img.first_pic {
@@ -399,29 +396,56 @@ img.first_pic {
 	
 }
 
-.test_width h2 {
+.test_text h2 {
 	width: 500px;
 	height: auto;
 }
 
 .test_width div {
 	display: flex;
-	margin: 200px 150px;
+	margin: 120px auto;
+	padding: 0 75px;
+	
+	max-width: 1280px;
 }
+
+
 
 @media screen and  (width <= 1000px) {
 	.test_width div {
+		
 		display: grid;
-		margin: 200px 75px;
+		margin: 200px 50px;
+		padding: 0;
+		
 	}
 	div.gallery img {
 		
 		width: 350px;
 		height:auto;
 	}
+	img.first_pic {
+		
+		max-width: 300px;
+	}
 }
 
-
-test_width {
+span.test_width {
 	position: relative;
+	top: 100px;
+	
+}
+
+div.gallery {
+	overflow: visible;
+	padding: 10px;	
+	position: relative;
+	z-index: 1;
+	/*filter: drop-shadow(0 1px 15px rgba(0,0,0,0.35));*/
+	margin: 0 0 auto;
+	text-align: center;
+	justify-content: center;
+	display:flex;
+	flex-wrap: wrap;
+	max-width: 100vw;
 }
